@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHIP · Conductive Hydrodynamic Ink Printer · Riya Shah</title>
+  
+  <!-- Same fonts as main dashboard -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Link to your main stylesheet -->
+  <link rel="stylesheet" href="../styles.css">
+  
+  <!-- Page specific styles - MINIMAL additions to keep your format -->
+  <style>
+    
+    .skill-badges {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+      margin: 1rem 0 1.5rem 0;
+    }
+    
+    .skill-badge {
+      background: rgba(233, 232, 232, 0.5);
+      color: #1e4b62;
+      padding: 0.4rem 1.2rem;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      border: 1px solid rgba(45, 127, 158, 0.3);
+    }
+    
+    .skill-badge.highlight {
+      background: #1e4b62;
+      color: white;
+    }
+    
+    /* PCB Image Gallery - Clean and simple */
+    .pcb-gallery {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 1.2rem;
+      margin: 2rem 0 2.5rem 0;
+    }
+    
+    .pcb-main {
+      background-image: url('../images/silver-pcb-complete.jpg');
+      background-size: cover;
+      background-position: center;
+      border-radius: 24px;
+      height: 320px;
+      box-shadow: 0 8px 20px -8px rgba(0,0,0,0.2);
+      border: 1px solid rgba(255,255,255,0.4);
+      position: relative;
+    }
+    
+    .pcb-secondary {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      gap: 1.2rem;
+    }
+    
+    .pcb-secondary-item {
+      background-size: cover;
+      background-position: center;
+      border-radius: 24px;
+      box-shadow: 0 8px 20px -8px rgba(0,0,0,0.2);
+      border: 1px solid rgba(255,255,255,0.4);
+      position: relative;
+    }
+    
+    .pcb-caption {
+      position: absolute;
+      bottom: 16px;
+      left: 16px;
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(4px);
+      color: white;
+      padding: 0.4rem 1.2rem;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+    
+    /* Two column layout for skills + specs */
+    .two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    
+    /* Soldering/PCB achievement cards */
+    .achievement-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    
+    .achievement-card {
+      background: rgba(255,255,255,0.7);
+      border-radius: 20px;
+      padding: 1.3rem;
+      border: 1px solid rgba(45,127,158,0.2);
+    }
+    
+    .achievement-icon {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .achievement-title {
+      font-weight: 700;
+      color: #0b2d4b;
+      font-size: 1.1rem;
+      margin-bottom: 0.3rem;
+    }
+    
+    .achievement-desc {
+      font-size: 0.9rem;
+      color: #2c4a5e;
+      margin: 0;
+    }
+    
+    /* Skills list - compact */
+    .skills-compact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin: 1rem 0;
+    }
+    
+    .skills-compact span {
+      background: white;
+      padding: 0.3rem 1rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #1e4b62;
+      border: 1px solid rgba(45,127,158,0.3);
+    }
+    
+    @media (max-width: 768px) {
+      .pcb-gallery {
+        grid-template-columns: 1fr;
+      }
+      .two-column {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="project-page">
+    
+    <!-- Back to dashboard -->
+    <a href="../index.html" class="back-link">
+      ← Back to dashboard
+    </a>
+    
+    <!-- ===== HEADER ===== -->
+    <div class="project-header">
+      <h1 class="project-title">Conductive Hydrodynamic Ink Printer</h1>
+    </div>
+    
+    <!-- ===== PHOTO GALLERY - TWO PHOTOS SIDE BY SIDE ===== -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 2rem 0 2.5rem 0; width: 100%;">
+      
+      <!-- Left image: SolidWorks CAD model -->
+      <div style="background-image: url('../images/CHIP.png'); background-size: contain; background-repeat: no-repeat; background-position: center; border-radius: 28px; height: 350px; box-shadow: 0 12px 28px -10px rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.4); position: relative;">
+        <span style="position: absolute; bottom: 20px; left: 20px; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); color: white; padding: 0.5rem 1.5rem; border-radius: 50px; font-size: 0.9rem; font-weight: 500;">🖥️ SolidWorks CAD assembly</span>
+      </div>
+      
+      <!-- Right image: 3D printed components -->
+      <div style="background-image: url('../images/CHIP-2.jpg'); background-size: contain; background-repeat: no-repeat; background-position: center; border-radius: 28px; height: 350px; box-shadow: 0 12px 28px -10px rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.4); position: relative;">
+        <span style="position: absolute; bottom: 20px; left: 20px; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); color: white; padding: 0.5rem 1.5rem; border-radius: 50px; font-size: 0.9rem; font-weight: 500;">🖨️ 3D printed components</span>
+      </div>
+      
+    </div>
+    
+    <!-- ===== PROJECT DETAILS GRID ===== -->
+    <div class="project-details">
+      <div class="detail-item">
+        <span class="detail-label">Date:</span>
+        <span class="detail-value">September 2025 - January 2026</span>
+      </div>
+    </div>
+    
+    <!-- ===== TWO COLUMN LAYOUT: OVERVIEW + KEY CONTRIBUTIONS ===== -->
+    <div class="two-column">
+      
+      <!-- LEFT COLUMN: Project Overview -->
+      <div class="project-section">
+        <h2>Project Overview</h2>
+        <p>
+          -  The Conductive Hydrodynamic Ink Printer (CHIP) is an additive manufacturing device that uses conductive, water-based nanoparticle inks to create circuits and sensors for a variety of applications. This robot allows the team to explore applications in PCB fabrication, integrated devices, wearable sensors and printed displays.
+        </p>
+        
+      </div>
+      
+      <!-- RIGHT COLUMN: Key Contributions -->
+      <div class="project-section">
+        <h2>Key Contributions</h2>
+        <p>
+          - Enhanced key structural components for the Conductive Hydrodynamic Ink Printer (CHIP) using SolidWorks, designing to ensure a precise fit, which enhanced overall mechanical operation and alignment.
+        </p>
+        <p>
+          - Designed and modelled a PCB mounting enclosure, improving PCB accessibility by approximately 30% and resolving stability issues, securing team approval.
+        </p>
+        <p>
+          - Applied tolerance analysis and design on SolidWorks components to ensure reliable component fit and system integration.
+        </p>
+        <p>
+          - Enabled the physical assembly of the system by fabricating and validating multiple 3D printed components to specification.
+        </p>
+      </div>
+      
+    </div>
+    
+    <!-- ===== SKILLS SUMMARY - COMPACT BADGES ===== -->
+    <div style="background: rgba(255,255,255,0.5); border-radius: 24px; padding: 1.5rem; margin: 1.5rem 0;">
+      <p style="font-weight: 700; color: #0b2d4b; margin-bottom: 1rem;">Technical Skills</p>
+      <div class="skills-compact">
+        <span>SolidWorks</span>
+        <span>3D Printing</span>
+        <span>Bambu Studio</span>
+        <span>PCB Mounting Enclosure Design</span>
+        <span>Tolerance Analysis</span>
+        <span>Precision mechanical design</span>
+        <span>Systems integration</span>
+        <span>Technical Drawing</span>
+      </div>
+    </div>
+    
+  </div>
+</body>
+</html>

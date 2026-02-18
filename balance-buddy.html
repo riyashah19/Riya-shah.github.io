@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Balance Buddy · Health Tech Hackathon · Riya Shah</title>
+  
+  <!-- Same fonts as main dashboard -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Link to your main stylesheet -->
+  <link rel="stylesheet" href="../styles.css">
+  
+  <!-- Page specific styles - MINIMAL additions to keep your format -->
+  <style>
+    
+    .skill-badges {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+      margin: 1rem 0 1.5rem 0;
+    }
+    
+    .skill-badge {
+      background: rgba(233, 232, 232, 0.5);
+      color: #1e4b62;
+      padding: 0.4rem 1.2rem;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      border: 1px solid rgba(45, 127, 158, 0.3);
+    }
+    
+    .skill-badge.highlight {
+      background: #1e4b62;
+      color: white;
+    }
+    
+    /* Photo Gallery - Side by side */
+    .photo-gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin: 2rem 0 2.5rem 0;
+    }
+    
+    .gallery-image {
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 28px;
+      height: 350px;
+      box-shadow: 0 12px 28px -10px rgba(0,0,0,0.2);
+      border: 1px solid rgba(255,255,255,0.4);
+      position: relative;
+    }
+    
+    .image-caption {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(4px);
+      color: white;
+      padding: 0.5rem 1.5rem;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    
+    /* Two column layout for content */
+    .two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+  
+    
+    /* Skills list - compact */
+    .skills-compact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin: 1rem 0;
+    }
+    
+    .skills-compact span {
+      background: white;
+      padding: 0.3rem 1rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #1e4b62;
+      border: 1px solid rgba(45,127,158,0.3);
+    }
+    
+    /* Project details */
+    .project-details {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+      background: rgba(255,255,255,0.5);
+      padding: 1.5rem;
+      border-radius: 24px;
+    }
+    
+    .detail-item {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .detail-label {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      color: #5c7f8c;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      margin-bottom: 0.3rem;
+    }
+    
+    .detail-value {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #0b2d4b;
+    }
+    
+    /* Section styling */
+    .project-section {
+      margin-bottom: 2.5rem;
+    }
+    
+    .project-section h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #0b2d4b;
+      margin-bottom: 1.2rem;
+    }
+    
+    .project-section p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: #1e293b;
+      margin-bottom: 1rem;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .photo-gallery {
+        grid-template-columns: 1fr;
+      }
+      .two-column {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="project-page">
+    
+    <!-- Back to dashboard -->
+    <a href="../index.html" class="back-link">
+      ← Back to dashboard
+    </a>
+    
+    <!-- ===== HEADER ===== -->
+    <div class="project-header">
+      <h1 class="project-title">Balance Buddy</h1>
+    </div>
+    
+    <!-- ===== PHOTO GALLERY - TWO PHOTOS SIDE BY SIDE ===== -->
+    <div class="photo-gallery">
+      
+      <!-- Left image: Belt prototype -->
+      <div class="gallery-image" style="background-image: url('images/balance_buddy.jpg');">
+      </div>
+      
+      <!-- Right image: Dashboard interface -->
+      <div class="gallery-image" style="background-image: url('images/Balance-2.png');">
+        <span class="image-caption">📊 Live staff monitoring dashboard</span>
+      </div>
+      
+    </div>
+    <!-- ===== TWO COLUMN LAYOUT: PROJECT OVERVIEW + KEY CONTRIBUTIONS ===== -->
+    <div class="two-column">
+      
+      <!-- LEFT COLUMN: Project Overview -->
+      <div class="project-section">
+        <h2>Project Overview</h2>
+        <p>
+          Balance Buddy is a wearable stability-monitoring belt designed to reduce fall risk during exercise and rehabilitation for older adults. With approximately one in three older adults falling every year, and limited staff supervision in group exercise settings, we created a solution that monitors lower-body stability in real-time while enabling staff to supervise multiple users simultaneously.
+        </p>
+      </div>
+      
+      <!-- RIGHT COLUMN: Key Contributions -->
+      <div class="project-section">
+        <h2>Key Contributions</h2>
+        <p>
+          - Designed and prototyped the wearable belt system with a rotary angle sensor connected to thigh band for tracking lower-body stability.
+        </p>
+        <p>
+          - Built real-time monitoring dashboard using HTML and CSS, enabling staff to supervise multiple users at once.
+        </p>
+        <p>
+          - Developed personalized threshold calibration for each user to distinguish normal movement from instability.
+        </p>
+        
+        <p>
+          - Implemented emergency alert button (double-press) for user-initiated calls for help.
+        </p>
+        <p>
+          - Designed a lever on SolidWorks that was attatched to the thigh band, ensuring smooth reaction timings with leg movements and the webpage.
+        </p>
+      </div>
+      
+    </div>
+    
+    <!-- ===== FUTURE PLANS ===== -->
+    <div class="project-section">
+      <h2>Future Plans</h2>
+      <div style="background: rgba(255,255,255,0.7); padding: 1.5rem; border-radius: 24px; border: 1px solid rgba(45,127,158,0.2);">
+        <ul style="list-style: none; padding: 0; margin: 0;">
+          <li style="margin-bottom: 1.2rem; display: flex; gap: 1rem;">
+            <span style="color: #1e4b62; font-weight: 700;">→</span>
+            <span>Add accelerometers and gyrometers for higher accuracy</span>
+          </li>
+          <li style="margin-bottom: 1.2rem; display: flex; gap: 1rem;">
+            <span style="color: #1e4b62; font-weight: 700;">→</span>
+            <span>Rep counting + exercise quality tracking</span>
+          </li>
+          <li style="margin-bottom: 1.2rem; display: flex; gap: 1rem;">
+            <span style="color: #1e4b62; font-weight: 700;">→</span>
+            <span>Long-term recovery monitoring</span>
+          </li>
+          <li style="margin-bottom: 1.2rem; display: flex; gap: 1rem;">
+            <span style="color: #1e4b62; font-weight: 700;">→</span>
+            <span>Audio alerts for accessibility</span>
+          </li>
+          <li style="margin-bottom: 0; display: flex; gap: 1rem;">
+            <span style="color: #1e4b62; font-weight: 700;">→</span>
+            <span>Machine learning for adaptive thresholds</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- ===== SKILLS SUMMARY - COMPACT BADGES ===== -->
+    <div style="background: rgba(255,255,255,0.5); border-radius: 24px; padding: 1.5rem; margin: 1.5rem 0;">
+      <p style="font-weight: 700; color: #0b2d4b; margin-bottom: 1rem;">Technical Skills</p>
+      <div class="skills-compact">
+        <span>Embedded systems</span>
+        <span>Arduino Microsensors</span>
+        <span>HTML/CSS</span>
+        <span>SolidWorks</span>
+        <span>Real-time monitoring</span>
+        <span>Threshold calibration</span>
+        <span>Webpage design</span>
+        <span>Rapid prototyping</span>
+        <span>Accessibility design</span>
+      </div>
+    </div>
+    
+    <!-- ===== PROJECT DOCUMENTS ===== -->
+    <div style="margin: 2rem 0; padding: 1.5rem; background: rgba(255,255,255,0.5); border-radius: 24px;">
+      <p style="font-weight: 700; color: #0b2d4b; margin-bottom: 1rem; font-size: 1.1rem;">📎 Project Documents</p>
+      <ul style="list-style: none; padding: 0; margin: 0;">
+        <li style="margin-bottom: 0.8rem; display: flex; align-items: center;">
+          <span style="color: #1e4b62; margin-right: 0.8rem; font-size: 1.1rem;">•</span>
+          <a href="files/Health Tech Hackathon.pdf" style="color: #1e4b62; text-decoration: none; font-weight: 500; border-bottom: 1px solid rgba(45,127,158,0.3); padding-bottom: 0.1rem;">Balance Buddy (PDF)</a>
+        </li>
+      </ul>
+    </div>
+    
+  </div>
+</body>
+</html>

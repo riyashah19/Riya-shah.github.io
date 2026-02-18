@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Statistical Distribution Fitting Tool · Riya Shah</title>
+  
+  <!-- Same fonts as main dashboard -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Link to your main stylesheet -->
+  <link rel="stylesheet" href="../styles.css">
+  
+  <!-- Page specific styles - MINIMAL additions to keep your format -->
+  <style>
+    
+    .skill-badges {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+      margin: 1rem 0 1.5rem 0;
+    }
+    
+    .skill-badge {
+      background: rgba(233, 232, 232, 0.5);
+      color: #1e4b62;
+      padding: 0.4rem 1.2rem;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      border: 1px solid rgba(45, 127, 158, 0.3);
+    }
+    
+    .skill-badge.highlight {
+      background: #1e4b62;
+      color: white;
+    }
+    
+    /* Photo Gallery - Three images grid */
+    .photo-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin: 2rem 0 2.5rem 0;
+    }
+    
+    .gallery-image {
+      background-size: cover;
+      background-position: center;
+      border-radius: 28px;
+      height: 300px;
+      box-shadow: 0 12px 28px -10px rgba(0,0,0,0.2);
+      border: 1px solid rgba(255,255,255,0.4);
+      position: relative;
+    }
+    
+    .image-caption {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(4px);
+      color: white;
+      padding: 0.5rem 1.5rem;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    
+    /* Two column layout for content */
+    .two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    
+    /* Distribution list */
+    .distro-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.8rem;
+      background: rgba(255,255,255,0.7);
+      padding: 1.5rem;
+      border-radius: 24px;
+      border: 1px solid rgba(45,127,158,0.2);
+      margin: 1.5rem 0;
+    }
+    
+    .distro-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1rem;
+      color: #1e4b62;
+    }
+    
+    .distro-item::before {
+      content: "📊";
+      font-size: 1.1rem;
+    }
+    
+    /* Deployment links */
+    .deployment-links {
+      display: flex;
+      gap: 1rem;
+      margin: 2rem 0;
+      flex-wrap: wrap;
+    }
+    
+    .deploy-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: white;
+      border: 1.5px solid #1e4b62;
+      padding: 0.8rem 1.8rem;
+      border-radius: 50px;
+      text-decoration: none;
+      color: #1e4b62;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    
+    .deploy-button:hover {
+      background: #1e4b62;
+      color: white;
+    }
+    
+    .deploy-button.primary {
+      background: #1e4b62;
+      color: white;
+    }
+    
+    .deploy-button.primary:hover {
+      background: #0b2d4b;
+    }
+    
+    /* Skills list - compact */
+    .skills-compact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin: 1rem 0;
+    }
+    
+    .skills-compact span {
+      background: white;
+      padding: 0.3rem 1rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #1e4b62;
+      border: 1px solid rgba(45,127,158,0.3);
+    }
+    
+    /* Section styling */
+    .project-section {
+      margin-bottom: 2.5rem;
+    }
+    
+    .project-section h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #0b2d4b;
+      margin-bottom: 1.2rem;
+    }
+    
+    .project-section h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #1a4a6b;
+      margin: 1.5rem 0 1rem 0;
+    }
+    
+    .project-section p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: #1e293b;
+      margin-bottom: 1rem;
+    }
+    
+    @media (max-width: 768px) {
+      .photo-gallery {
+        grid-template-columns: 1fr;
+      }
+      .two-column {
+        grid-template-columns: 1fr;
+      }
+      .distro-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="project-page">
+    
+    <!-- Back to dashboard -->
+    <a href="../index.html" class="back-link">
+      ← Back to dashboard
+    </a>
+    
+    <!-- ===== HEADER ===== -->
+    <div class="project-header">
+      <h1 class="project-title">Statistical Distribution Fitting Tool</h1>
+    </div>
+    
+    <!-- ===== PHOTO GALLERY - THREE SCREENSHOTS ===== -->
+    <div class="photo-gallery">
+      
+      <div class="gallery-image" style="background-image: url('images/Stats-1.png'); background-size: cover; background-position: top;">
+      </div>
+      
+      <div class="gallery-image" style="background-image: url('images/Stats-2.png'); background-size: cover; background-position: center;">
+      </div>
+      
+      <div class="gallery-image" style="background-image: url('images/Stats-3.png'); background-size: cover; background-position: top;">
+      </div>
+      
+    </div>
+    
+    <!-- ===== TWO COLUMN LAYOUT: OVERVIEW + DISTRIBUTIONS ===== -->
+    <div class="two-column">
+      
+      <!-- LEFT COLUMN: Project Overview -->
+      <div class="project-section">
+        <h2>Project Overview</h2>
+        <p>
+          I built an interactive Streamlit web application that allows users to fit statistical distributions to their data.
+        </p>
+        <p>
+          The app provides both automatic fitting using SciPy's distribution methods and manual parameter adjustment via sliders.
+        </p>
+        <p>
+          Users can enter data manually or upload CSV files, visualize the results, and export fit parameters.
+        </p>
+      </div>
+      
+      <!-- RIGHT COLUMN: Distributions Implemented -->
+      <div class="project-section">
+        <h2>Distributions Implemented</h2>
+        <div class="distro-list">
+          <span class="distro-item">Normal</span>
+          <span class="distro-item">Gamma</span>
+          <span class="distro-item">Weibull</span>
+          <span class="distro-item">Exponential</span>
+          <span class="distro-item">Uniform</span>
+          <span class="distro-item">Logistic</span>
+          <span class="distro-item">Lognormal</span>
+          <span class="distro-item">Beta</span>
+          <span class="distro-item">Chi-square</span>
+          <span class="distro-item">Rayleigh</span>
+        </div>
+      </div>
+      
+    </div>
+    
+    <!-- ===== SKILLS SUMMARY - COMPACT BADGES ===== -->
+    <div style="background: rgba(255,255,255,0.5); border-radius: 24px; padding: 1.5rem; margin: 1.5rem 0;">
+      <p style="font-weight: 700; color: #0b2d4b; margin-bottom: 1rem;">Technical Skills</p>
+      <div class="skills-compact">
+        <span>Python</span>
+        <span>Streamlit</span>
+        <span>Data visualization</span>
+        <span>Statistical analysis</span>
+        <span>SciPy</span>
+        <span>NumPy</span>
+        <span>Pandas</span>
+        <span>Matplotlib</span>
+        <span>Web development</span>
+        <span>Web design</span>
+        <span>Git/GitHub</span>
+        <span>Streamlit deployment</span>
+        <span>CSV handling</span>
+      </div>
+    </div>
+    
+    <!-- ===== PYTHON SCRIPT LINK ===== -->
+    <div class="deployment-links">
+      <a href="files/app.py" class="deploy-button" target="_blank">
+        <span>📄</span>
+        Python Script (.py)
+      </a>
+    </div>
+    
+  </div>
+</body>
+</html>

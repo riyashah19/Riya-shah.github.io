@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flood Water Recycler · Riya Shah</title>
+  
+  <!-- Same fonts as main dashboard -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Link to your main stylesheet -->
+  <link rel="stylesheet" href="../styles.css">
+  
+  <!-- Page specific styles - keeping it simple like TENG -->
+  <style>
+    
+    .skill-badges {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+      margin: 1rem 0 1.5rem 0;
+    }
+    
+    .skill-badge {
+      background: rgba(29, 78, 98, 0.12);
+      color: #1e4b62;
+      padding: 0.4rem 1.2rem;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      border: 1px solid rgba(45, 127, 158, 0.3);
+    }
+    
+    .skill-badge.highlight {
+      background: #1e4b62;
+      color: white;
+    }
+    
+    /* Photo gallery - simple side by side */
+    .photo-gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin: 2rem 0 2.5rem 0;
+      width: 100%;
+    }
+    
+    .gallery-image {
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 28px;
+      height: 300px;
+      box-shadow: 0 12px 28px -10px rgba(0,0,0,0.2);
+      border: 1px solid rgba(255,255,255,0.4);
+      position: relative;
+      background-color: #f8fafc;
+    }
+    
+    .image-caption {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(4px);
+      color: white;
+      padding: 0.5rem 1.5rem;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    
+    /* Two column layout */
+    .two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    
+    /* Team section */
+    .team-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin: 1.5rem 0;
+      padding: 1rem 1.5rem;
+      background: rgba(255,255,255,0.5);
+      border-radius: 50px;
+      align-items: center;
+    }
+    
+    .team-label {
+      font-weight: 700;
+      color: #0b2d4b;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 0.05em;
+    }
+    
+    .team-member {
+      background: white;
+      padding: 0.3rem 1.2rem;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #1e4b62;
+      border: 1px solid rgba(45,127,158,0.2);
+    }
+    
+    .team-member.highlight {
+      background: #1e4b62;
+      color: white;
+    }
+    
+    /* Project section */
+    .project-section {
+      margin-bottom: 2.5rem;
+    }
+    
+    .project-section h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #1a4a6b;
+      margin-bottom: 1rem;
+      border-left: 6px solid #2d7f9e;
+      padding-left: 1rem;
+    }
+    
+    .project-section p {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: #1e293b;
+      margin-bottom: 1rem;
+    }
+    
+    /* Skills compact */
+    .skills-compact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin: 1rem 0;
+    }
+    
+    .skills-compact span {
+      background: white;
+      padding: 0.3rem 1rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #1e4b62;
+      border: 1px solid rgba(45,127,158,0.3);
+    }
+    
+    /* Achievement highlight */
+    .achievement-highlight {
+      background: rgba(45,127,158,0.1);
+      border-left: 6px solid #1e4b62;
+      padding: 1.2rem 1.5rem;
+      border-radius: 16px;
+      margin: 1.5rem 0;
+      font-weight: 500;
+    }
+    
+    @media (max-width: 768px) {
+      .photo-gallery {
+        grid-template-columns: 1fr;
+      }
+      .two-column {
+        grid-template-columns: 1fr;
+      }
+      .team-section {
+        flex-direction: column;
+        align-items: flex-start;
+        border-radius: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="project-page">
+    
+    <!-- Back to dashboard -->
+    <a href="../index.html" class="back-link">
+      ← Back to dashboard
+    </a>
+    
+    <!-- ===== HEADER ===== -->
+    <div class="project-header">
+      <h1 class="project-title">Flood Water Recycler</h1>
+    </div>
+
+       <!-- ===== SKILLS SUMMARY ===== -->
+    <div style="background: rgba(255,255,255,0.5); border-radius: 24px; padding: 1.5rem; margin: 1.5rem 0;">
+      <p style="font-weight: 700; color: #0b2d4b; margin-bottom: 1rem;">Technical Skills</p>
+      <div class="skills-compact">
+        <span>Leadership</span>
+        <span>Arduino Microsensors</span>
+        <span>Python</span>
+        <span>Sensor Integration</span>
+        <span>Rapid Prototyping</span>
+        <span>Sustainable Design</span>
+      </div>
+    </div>
+    
+    
+    <!-- ===== PHOTO GALLERY - ADD YOUR PHOTOS HERE ===== -->
+    <div class="photo-gallery">
+      
+      <!-- Left image: Team/Prototype -->
+      <div class="gallery-image" style="background-image: url('images/flood-sensor.jpg');">
+      </div>
+      
+    </div>
+    
+    <!-- ===== THE PROBLEM ===== -->
+    <div class="project-section">
+      <h2>The Problem</h2>
+      <p>
+        During Kenya's rainy seasons, flooding destroys homes, farmland, and infrastructure. 
+        Meanwhile, communities across the country face unreliable electricity access, with frequent blackouts limiting daily life and economic activity.
+        I saw an opportunity; what if the destructive energy of floodwater could be captured and turned into something useful?
+        This question drove me to design a system that harnesses the kinetic energy of floodwater and converts it into electricity, thus transforming a natural disaster into a sustainable power source for communities in need.
+
+      </p>
+    </div>
+    
+    <div class="project-section">
+      <h2>Solution</h2>
+      <p>
+        I designed a floodwater energy harvesting system that captures the kinetic energy of moving floodwater and converts it into electricity. 
+        The system uses a turbine mechanism integrated into water dams and as water rushes through, it spins the turbine, which drives a small generator to produce power. 
+        This electricity can be stored in batteries or used immediately for lighting, charging, or running small appliances in off-grid communities.
+      </p>
+      <p>
+        To ensure the system could function in real-world conditions, I programmed Arduino microsensors to monitor water flow and trigger the turbine only when sufficient force is present, preventing mechanical wear during dry periods.
+        The prototype was designed to be low-cost, durable, and easy to maintain, which was shaped by the resource constraints I observed in Kenyan communities.
+      </p>
+    </div>
+    
+  </div>
+</body>
+</html>

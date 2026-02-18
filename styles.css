@@ -1,0 +1,288 @@
+/* Applies to whole page */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(145deg, #f5f7fc 0%, #e9edf4 100%);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  padding: 2rem 1.5rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #1e293b;
+  line-height: 1.5;
+}
+
+/* ========== STUDENT INFO - CENTERED ========== */
+.student-info {
+  text-align: center;           /* ← Centers all text */
+  margin-bottom: 3rem;         /* ← SPACE between name and dashboard */
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(45, 127, 158, 0.16);  /* Optional divider */
+}
+
+.student-name {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #0b2d4b;
+  margin-bottom: 0.3rem;
+  line-height: 1.2;
+}
+
+.student-program {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #1e4b62;
+  margin-bottom: 0.2rem;
+}
+
+.student-school {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #5c7f8c;
+  margin-bottom: 0;
+}
+
+/* ========== ADD SPACE BEFORE DASHBOARD HEADER ========== */
+.dashboard-header {
+  margin-top: 1rem;            /* ← Extra space after student info */
+}
+
+/* ----- main white card that holds everything ----- */
+.dashboard {
+  max-width: 1280px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.58);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 48px 48px 40px 40px;
+  box-shadow: 0 20px 40px -10px rgba(0, 20, 40, 0.12), 0 8px 16px -8px rgba(0, 0, 0, 0.06);
+  padding: 2.4rem 2.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+/* ----- header section & project count ----- */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.dashboard-header h1 {
+  font-weight: 620;
+  font-size: 1.95rem;
+  letter-spacing: -0.02em;
+  background: linear-gradient(145deg, #0b2d4b, #1a4a6b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  padding-left: 1rem;
+  line-height: 1.2;
+}
+
+.badge {
+  background: #ffffffcc;
+  backdrop-filter: blur(2px);
+  padding: 0.5rem 1.2rem;
+  border-radius: 60px;
+  font-size: 0.9rem;
+  font-weight: 520;
+  color: #1e4b62;
+  border: 0.5px solid rgba(45, 127, 158, 0.3);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+.badge span {
+  font-style: normal;
+  background: #1e4b62;
+  color: white;
+  border-radius: 20px;
+  padding: 0.1rem 0.7rem;
+  margin-left: 0.4rem;
+}
+
+/* ----- project grid – responsive square layout ----- */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 2rem 1.8rem;
+}
+
+/* ----- project card – square, clickable, clean cover ----- */
+.project-card {
+  background: white;
+  border-radius: 28px;
+  box-shadow: 0 8px 18px -6px rgba(0, 32, 64, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.02);
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  aspect-ratio: 1 / 1;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+}
+
+/* ----- cover photo area – shared by all cards ----- */
+.card-cover {
+  position: relative;
+  width: 100%;
+  flex: 1 1 80%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+  transition: all 0.2s;
+}
+
+/* subtle gradient overlay for depth */
+.card-cover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.02) 0%, rgba(20, 40, 60, 0.02) 100%);
+  pointer-events: none;
+  transition: background 0.2s;
+}
+
+.project-card:hover .card-cover::after {
+  background: linear-gradient(0deg, rgba(35, 107, 138, 0.06) 0%, rgba(28, 78, 108, 0.02) 80%);
+}
+
+/* ----- project title bar ----- */
+.project-label {
+  background: rgb(237, 217, 217);
+  padding: 1rem 1.2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.02);
+  font-weight: 540;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.01em;
+  color: #173a4c;
+  border-radius: 0 0 28px 28px;
+  flex: 0 0 auto;
+  transition: background 0.1s;
+}
+
+.project-card:hover .project-label {
+  background: #f6edf0;
+  color: #0f475e;
+}
+
+/* small arrow indicator */
+.project-label span {
+  margin-left: 0.5rem;
+  font-size: 1.2rem;
+  opacity: 0.6;
+  transition: transform 0.18s, opacity 0.18s;
+}
+
+.project-card:hover .project-label span {
+  transform: translateX(4px);
+  opacity: 1;
+}
+
+/* ----- COVER PHOTOS for each project ----- */
+.cover-silver-ink{
+  background-image: url('images/silver-ink.jpg');
+  /* silver-ink */
+}
+
+.cover-flood-sensor {
+  background-image: url('images/flood-sensor.jpg');
+  /* suspension bridge – civil */
+}
+
+.cover-balance-buddy {
+  background-image: url('images/balance_buddy.jpg');
+  /* circuit board – electrical */
+}
+
+.cover-stats-distribution {
+  background-image: url('images/stats-distribution.png');
+  /* robotic arm – mechatronics */
+}
+
+.cover-TENG {
+  background-image: url('images/TENG.jpg');
+  /* fluid simulation – aerospace/mechanical */
+}
+
+.cover-CHIP {
+  background-image: url('images/CHIP.png');
+  /* solar panels – renewable energy */
+}
+
+.cover-jewellery-box {
+  background-image: url('images/jewellery-box.png');
+  /* 3D CAD model – design engineering */
+}
+
+.cover-embedded {
+  background-image: url('images/eng-comp.jpg');
+  /* embedded system – computer engineering */
+}
+
+/* ----- dashboard footer ----- */
+.dashboard-footer {
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #5c7f8c;
+  border-top: 1px solid rgba(45, 127, 158, 0.16);
+  padding-top: 1.8rem;
+  letter-spacing: 0.3px;
+  font-weight: 420;
+}
+
+.dashboard-footer span {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 0.4rem 1.4rem;
+  border-radius: 60px;
+  backdrop-filter: blur(2px);
+}
+
+/* ----- responsive adjustments ----- */
+@media (max-width: 640px) {
+  body {
+    padding: 1rem 0.8rem;
+  }
+  
+  .dashboard {
+    padding: 1.6rem 1.2rem;
+    border-radius: 32px;
+  }
+  
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+  
+  .dashboard-header h1 {
+    font-size: 1.6rem;
+  }
+  
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .project-card {
+    aspect-ratio: 1 / 1;
+  }
+}

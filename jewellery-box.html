@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jewellery Box · Fusion 360 · Riya Shah</title>
+  
+  <!-- Same fonts as main dashboard -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Link to your main stylesheet -->
+  <link rel="stylesheet" href="../styles.css">
+  
+  <!-- Page specific styles - MINIMAL additions to keep your format -->
+  <style>
+    
+    .skill-badges {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+      margin: 1rem 0 1.5rem 0;
+    }
+    
+    .skill-badge {
+      background: rgba(233, 232, 232, 0.5);
+      color: #1e4b62;
+      padding: 0.4rem 1.2rem;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      border: 1px solid rgba(45, 127, 158, 0.3);
+    }
+    
+    .skill-badge.highlight {
+      background: #1e4b62;
+      color: white;
+    }
+    
+    /* PCB Image Gallery - Clean and simple */
+    .pcb-gallery {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 1.2rem;
+      margin: 2rem 0 2.5rem 0;
+    }
+    
+    .pcb-main {
+      background-image: url('../images/silver-pcb-complete.jpg');
+      background-size: cover;
+      background-position: center;
+      border-radius: 24px;
+      height: 320px;
+      box-shadow: 0 8px 20px -8px rgba(0,0,0,0.2);
+      border: 1px solid rgba(255,255,255,0.4);
+      position: relative;
+    }
+    
+    .pcb-secondary {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      gap: 1.2rem;
+    }
+    
+    .pcb-secondary-item {
+      background-size: cover;
+      background-position: center;
+      border-radius: 24px;
+      box-shadow: 0 8px 20px -8px rgba(0,0,0,0.2);
+      border: 1px solid rgba(255,255,255,0.4);
+      position: relative;
+    }
+    
+    .pcb-caption {
+      position: absolute;
+      bottom: 16px;
+      left: 16px;
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(4px);
+      color: white;
+      padding: 0.4rem 1.2rem;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+    
+    /* Two column layout for skills + specs */
+    .two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    
+    
+    /* Skills list - compact */
+    .skills-compact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin: 1rem 0;
+    }
+    
+    .skills-compact span {
+      background: white;
+      padding: 0.3rem 1rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #1e4b62;
+      border: 1px solid rgba(45,127,158,0.3);
+    }
+    
+    @media (max-width: 768px) {
+      .pcb-gallery {
+        grid-template-columns: 1fr;
+      }
+      .two-column {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="project-page">
+    
+    <!-- Back to dashboard -->
+    <a href="../index.html" class="back-link">
+      ← Back to dashboard
+    </a>
+    
+    <!-- ===== HEADER ===== -->
+    <div class="project-header">
+      <h1 class="project-title">Jewellery Box</h1>
+    </div>
+    
+    <!-- ===== PHOTO GALLERY - ONE PHOTO ===== -->
+    <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin: 2rem 0 2.5rem 0; width: 100%;">
+      
+      <!-- Image: Fusion 360 CAD model -->
+      <div style="background-image: url('images/jewellery-box.png'); background-size: contain; background-repeat: no-repeat; background-position: center; border-radius: 28px; height: 350px; box-shadow: 0 12px 28px -10px rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.4); position: relative;">
+        <span style="position: absolute; bottom: 20px; left: 20px; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); color: white; padding: 0.5rem 1.5rem; border-radius: 50px; font-size: 0.9rem; font-weight: 500;">🖥️ Fusion 360 model</span>
+      </div>
+      
+    </div>
+    
+    <!-- ===== TWO COLUMN LAYOUT: OVERVIEW + KEY FEATURES ===== -->
+    <div class="two-column">
+      
+      <!-- LEFT COLUMN: Project Overview -->
+      <div class="project-section">
+        <h2>Project Overview</h2>
+        <p>
+          - Designed a custom jewellery box in Fusion 360 with various compartments sized to true dimensions for organizing rings, earrings, necklaces, and other accessories.
+        </p>
+        <p>
+          - Created a movable lid mechanism that allows smooth opening and closing while maintaining alignment with the base.
+        </p>
+      </div>
+      
+      <!-- RIGHT COLUMN: Key Features -->
+      <div class="project-section">
+        <h2>Key Features</h2>
+        <p>
+          - Multiple precision-sized compartments for different jewellery types
+        </p>
+        <p>
+          - Hinged/movable lid designed for smooth operation
+        </p>
+        <p>
+          - True-to-scale dimensions ensuring functional storage
+        </p>
+      </div>
+      
+    </div>
+    
+    <!-- ===== DETAILED DESIGN ===== -->
+    <div class="project-section">
+      <h2>Design Details</h2>
+      <div style="background: white; padding: 1.5rem; border-radius: 24px; border: 1px solid rgba(45,127,158,0.2);">
+        <ul style="list-style: none; padding: 0;">
+          <li style="margin-bottom: 0.8rem; display: flex; gap: 0.8rem;">
+            <span style="color: #1e4b62;">✓</span>
+            <span><strong>Ring compartment:</strong> Sized to fit multiple rings with easy access</span>
+          </li>
+          <li style="margin-bottom: 0.8rem; display: flex; gap: 0.8rem;">
+            <span style="color: #1e4b62;">✓</span>
+            <span><strong>Earring section:</strong> Compartments for studs and drop earrings</span>
+          </li>
+          <li style="margin-bottom: 0.8rem; display: flex; gap: 0.8rem;">
+            <span style="color: #1e4b62;">✓</span>
+            <span><strong>Necklace area:</strong> Dedicated space to prevent tangling</span>
+          </li>
+          <li style="margin-bottom: 0.8rem; display: flex; gap: 0.8rem;">
+            <span style="color: #1e4b62;">✓</span>
+            <span><strong>Lid mechanism:</strong> Designed for smooth rotation and secure closure</span>
+          </li>
+          <li style="margin-bottom: 0.8rem; display: flex; gap: 0.8rem;">
+            <span style="color: #1e4b62;">✓</span>
+            <span><strong>True-to-scale:</strong> All measurements based on actual jewellery dimensions</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- ===== SKILLS SUMMARY - COMPACT BADGES ===== -->
+    <div style="background: rgba(255,255,255,0.5); border-radius: 24px; padding: 1.5rem; margin: 1.5rem 0;">
+      <p style="font-weight: 700; color: #0b2d4b; margin-bottom: 1rem;">Technical Skills</p>
+      <div class="skills-compact">
+        <span>Fusion 360</span>
+        <span>CAD Modeling</span>
+        <span>Parametric Design</span>
+        <span>Assembly Design</span>
+        <span>Mechanical Joints</span>
+        <span>Precision Dimensioning</span>
+        <span>Product Design</span>
+        <span>3D Modeling</span>
+      </div>
+    </div>
+    
+  </div>
+</body>
+</html>
